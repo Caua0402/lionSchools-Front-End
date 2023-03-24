@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    width: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100px;
+    background-color: #3347B0;
+}
+
+.name-image{
+    display: flex;
+    align-items: center;
+    width: 190px;
+    height: 100px;
+    gap: 11px;
+    padding-left: 96px;
+}
+
+.img-lion{
+    width: 60px;
+    height: 75.03px;
+}
+
+.title-scholl{
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffff;
+}
+
+.sair{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 124px;
+    height: 42.67px;
+    padding-top: 47px;
+    gap: 7px;
+}
+
+.sair i{
+    font-size: 1rem;
+    color: #fff;
+}
+
+
+.return{
+    font-size: 1rem;
+    color: #ffff;
+    font-weight: 500;
+}
+
+main{
+    width: 100vw;
+    height: 462px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+}
+
+.text{
+    font-size: 3.586rem;
+}
+
+.cursos{
+    width: 400px;
+    height: 200px;
+    background-color: #3347B0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+footer{
+    display: grid;
+    justify-self: start;
+    width: 100vw;
+    height: 140px;
+}
