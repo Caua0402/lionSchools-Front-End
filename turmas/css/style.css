@@ -2,6 +2,7 @@
     --primary-color: #3347B0;
     --secondary-color: #FFFFFF;
     --primary-font: 'Roboto'
+    --secondary-font: 'Poppins'
 }
 body{
     height: 100vh;
@@ -51,9 +52,92 @@ header{
     color: var(--secondary-color);
 }
 
+.container-status{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: #BCC2E5;
+    padding: 0 96px;
+}
+
+.status-cursos{
+
+}
+
+.legenda-cursos{
+    display: flex;
+    align-items: center;
+}
+
+.legend{
+    color: #3347B0;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 24px;
+}
+
+.container-azul{
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-color);
+}
+
+.container-amarelo{
+    width: 20px;
+    height: 20px;
+    background-color: #E5B657;
+}
+
+.cursando{
+    color: #3347B0;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px;
+}
+
 main{
     display: flex;
-    justify-content: space-around;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    padding: 16px;
+    gap: 64px;
+    padding: 16px;
+}
+
+.card{
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 0 8px #0006;
+    padding: 30px;
+    background-color: #3347B0;
+}
+
+.text-card{
+    display: flex;
+}
+
+.card__image{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 1px 0px 8px;
+}
+
+.card__description{
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 27px;
 }
 
 /* FOOTER GERAL*/
