@@ -4,6 +4,7 @@
 import { listarCursos } from "./apis.js"
 const cursosLista = await listarCursos()
 
+
 const criarCardCursos = ( curso ) => {
     const container = document.createElement('a')
     container.classList.add('container-curso')
@@ -22,7 +23,13 @@ const criarCardCursos = ( curso ) => {
     container.append(info)
     info.append(icone, sigla)
 
+    container.addEventListener('click', ()=> {
+        localStorage.setItem('curso', sigla.textContent);})
     return container
+}
+
+const getAlunos = (curso) => {
+
 }
 
 const carregarCardCursos = async () => {
