@@ -45,9 +45,10 @@
     align-items: center;
     gap: 24px;
 }
-.container-info-curso i{
+.container-info-curso img{
     color: var(--secondary-color);
-    font-size: 64px;
+    height: 64px;
+    filter: invert(100%);
 }
 .title-curso{
     font-size: 4rem;
