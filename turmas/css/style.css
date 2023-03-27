@@ -2,7 +2,6 @@
     --primary-color: #3347B0;
     --secondary-color: #FFFFFF;
     --primary-font: 'Roboto'
-    --secondary-font: 'Poppins'
 }
 body{
     height: 100vh;
@@ -71,6 +70,7 @@ header{
 }
 
 .legend{
+    font-family: var(--primary-font);
     color: #3347B0;
     font-size: 1rem;
     font-weight: 500;
@@ -90,14 +90,17 @@ header{
 }
 
 .cursando{
+    font-family: var(--primary-font);
     color: #3347B0;
     font-size: 1rem;
     font-weight: 500;
+    line-height: 19px;
     padding: 8px;
 }
 
 main{
     display: flex;
+    flex-direction: column;
     height: 100vh;
 }
 
@@ -105,7 +108,6 @@ main{
     display: flex;
     padding: 16px;
     gap: 64px;
-    padding: 16px;
 }
 
 .card{
@@ -123,6 +125,12 @@ main{
 
 .text-card{
     display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: 500;
+    line-height: 75px;
+    font-family: var(--primary-font);
+    color: var(--primary-color);
 }
 
 .card__image{

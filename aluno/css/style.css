@@ -1,7 +1,8 @@
 :root{
     --primary-color: #3347B0;
     --secondary-color: #FFFFFF;
-    --primary-font: 'Roboto'
+    --primary-font: 'Roboto';
+    --secondary-font: 'Poppins';
 }
 body{
     height: 100vh;
@@ -74,7 +75,10 @@ main{
     align-items: center;
     font-family: var(--primary-font);
     color: var(--primary-color);
-    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 27px;
+    font-weight: 500;
+    font-family: var(--secondary-font);
 }
 .aluno-info img{
     height: auto;
