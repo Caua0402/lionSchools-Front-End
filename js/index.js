@@ -8,7 +8,7 @@ const cursosLista = await listarCursos()
 const criarCardCursos = ( curso ) => {
     const container = document.createElement('a')
     container.classList.add('container-curso')
-    container.href = '../turmas/index.html'
+    //container.href = '../turmas/index.html'
 
     const info = document.createElement('div')
     info.classList.add('container-info-curso')
@@ -24,12 +24,19 @@ const criarCardCursos = ( curso ) => {
     info.append(icone, sigla)
 
     container.addEventListener('click', ()=> {
-        localStorage.setItem('curso', sigla.textContent);})
+        localStorage.setItem('curso', sigla.textContent);
+        if(curso){
+            getAlunos(curso)
+        }
+    })
+    
     return container
 }
 
 const getAlunos = (curso) => {
+    console.log(curso.sigla)
 
+    
 }
 
 const carregarCardCursos = async () => {
