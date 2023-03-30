@@ -60,9 +60,6 @@ header{
     padding: 0 96px;
 }
 
-.status-cursos{
-
-}
 
 .legenda-cursos{
     display: flex;
@@ -106,7 +103,8 @@ main{
 
 .container{
     display: flex;
-    padding: 16px;
+    justify-content: center;
+    padding: 30px;
     gap: 64px;
 }
 
@@ -121,6 +119,19 @@ main{
     box-shadow: 0 0 8px #0006;
     padding: 30px;
     background-color: #3347B0;
+}
+
+.card_finalizado{
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 0 8px #0006;
+    padding: 30px;
+    background-color: #E5B657;
 }
 
 .text-card{
@@ -144,8 +155,8 @@ main{
     color: var(--secondary-color);
     font-family: var(--secondary-font);
     font-weight: 500;
-    font-size: 1.125rem;
     line-height: 27px;
+    text-align: center;
 }
 
 /* FOOTER GERAL*/
