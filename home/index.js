@@ -24,9 +24,11 @@ const criarCardCursos = ( curso ) => {
     info.append(icone, sigla)
 
     container.addEventListener('click', ()=> {
-        localStorage.setItem('curso', sigla.textContent)
+        localStorage.setItem('curso', curso.nome)
+        localStorage.setItem('sigla', sigla.textContent)
     })
     
+
     return container
 }
 

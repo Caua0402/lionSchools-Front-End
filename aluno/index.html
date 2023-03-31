@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="icon" type="imagem/png" href="./img/logo-image.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    
+
     <script src="https://kit.fontawesome.com/4f821b9693.js" crossorigin="anonymous"></script>
+    <script src="./index.js" type="module" defer></script>
     <title>Lion School - Aluno</title>
 </head>
+
 <body>
     <header>
         <div class="container-logo">
@@ -28,53 +33,63 @@
             </div>
         </a>
     </header>
-        
+
     <main>
 
-        <div class="container-aluno">
+        <div class="container-aluno" id="container-aluno">
 
-            <div class="aluno-info">
-                <img src="./img/foto-perfil.png" alt="">
-                <p>José Matheus da Silva Miranda</p>
+            <div class="aluno-info" id="aluno-info">
+
             </div>
-                <div class="container-status">
-                    <div class="container-notas">
-                        <p class="notas-azul">90</p>
-                        <p class="notas-vermelho">30</p>
+
+            <div class="container-status" id="container-status">
+
+                <div class="container-progresso" id="container-progresso">
+
+                    <div class="container-barra">
+                        <p>SOP</p>
+                        <div class="container-azul">
+                            <div class="barra-azul"></div>
+                            <p class="notas-azul">90</p>
+                        </div>
+
+                    </div>
+
+                    <div class="container-barra">
+                        <p>IPR</p>
+                        <div class="container-vermelho">
+                            <div class="barra-vermelho"></div>
+                            <p class="notas-vermelho">30</p>
+                        </div>
+                    </div>
+
+                    <div class="container-barra">
+                        <p>LIMA</p>
+                        <div class="barra-amarelo"></div>
                         <p class="notas-amarelo">50</p>
+                    </div>
+
+                    <div class="container-barra">
+                        <p>BD</p>
+                        <div class="barra-azul"></div>
                         <p class="notas-azul">90</p>
+                    </div>
+
+                    <div class="container-barra">
+                        <p>PBE</p>
+                        <div class="barra-azul"></div>
                         <p class="notas-azul">75</p>
+                    </div>
+
+                    <div class="container-barra">
+                        <p>PFE</p>
+                        <div class="barra-azul"></div>
                         <p class="notas-azul">100</p>
                     </div>
-                    <div class="container-progresso">
-                        <div class="container-barra">
-                            <div class="barra-azul"></div>
-                        </div>
-                        <div class="container-barra">
-                            <div class="barra-vermelho"></div>
-                        </div>
-                        <div class="container-barra">
-                            <div class="barra-amarelo"></div>
-                        </div>
-                        <div class="container-barra">
-                            <div class="barra-azul"></div>
-                        </div>
-                        <div class="container-barra">
-                            <div class="barra-azul"></div>
-                        </div>
-                        <div class="container-barra">
-                            <div class="barra-azul"></div>
-                        </div>
-                    </div>
-                    <div class="container-disciplina">
-                        <p>SOP</p>
-                        <p>IPR</p>
-                        <p>LIMA</p>
-                        <p>BD</p>
-                        <p>PBE</p>
-                        <p>PFE</p>
-                    </div>
+
                 </div>
+
+            </div>
 
     </main>
     <footer>
@@ -89,10 +104,10 @@
             </li>
             <li class="container-icon">
                 <i class="fa-solid fa-location-dot"></i>
-                <p class="text-local">Rua tcc, 211,  Centro, Jandira</p>
+                <p class="text-local">Rua tcc, 211, Centro, Jandira</p>
             </li>
         </ul>
-        <p class="copyright">Copyright © 2023 | Cauã Felipe e Yasmin</p>
+        <p class="copyright">Copyright © 2023 | Cauã Felipe | Yasmin Gonçalves</p>
         <div class="container-social">
             <a href="#" class="container-icon-social">
                 <i class="fa-brands fa-youtube"></i>
@@ -109,4 +124,5 @@
         </div>
     </footer>
 </body>
+
 </html>

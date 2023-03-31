@@ -15,3 +15,11 @@ export const listarAlunos = async (curso) => {
 
     return data
 }
+
+export const getAluno = async (matricula) => {
+    const url = `https://lion-school-apis.cyclic.app//v1/lion-school/alunos/${matricula}`
+    const response = await fetch(url)
+    const data = await response.json()
+
+    return data 
+}

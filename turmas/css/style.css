@@ -1,7 +1,8 @@
 :root{
     --primary-color: #3347B0;
     --secondary-color: #FFFFFF;
-    --primary-font: 'Roboto'
+    --primary-font: 'Roboto';
+    --secondary-font: 'Poppins';
 }
 body{
     height: 100vh;
@@ -121,6 +122,14 @@ main{
     background-color: #3347B0;
 }
 
+.card img{
+    width: 200px;
+}
+
+.finalizado{
+    background-color: #E5B657
+}
+
 .card_finalizado{
     width: 200px;
     height: 300px;
@@ -142,6 +151,7 @@ main{
     line-height: 75px;
     font-family: var(--primary-font);
     color: var(--primary-color);
+    padding-top: 35px;
 }
 
 .card__image{
@@ -154,6 +164,7 @@ main{
 .card__description{
     color: var(--secondary-color);
     font-family: var(--secondary-font);
+    font-size: 1rem;
     font-weight: 500;
     line-height: 27px;
     text-align: center;
