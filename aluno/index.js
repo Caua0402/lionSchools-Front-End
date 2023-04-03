@@ -1,13 +1,14 @@
 'use strict'
 
- import { getAluno } from "../js/apis.js"
- const alunoInfo = await getAluno(localStorage.getItem('matricula'))
+import { getAluno } from "../js/apis.js"
+const alunoInfo = await getAluno(localStorage.getItem('matricula'))
+console.log(alunoInfo.curso[0].disciplinas)
 
-const criarCardAluno = ( aluno ) => {
+const criarCardAluno = (aluno) => {
     const container = document.getElementById('aluno-info')
 
     const foto = document.createElement('img')
-    foto.src = aluno.foto 
+    foto.src = aluno.foto
 
     const nome = document.createElement('p')
     nome.textContent = aluno.nome
@@ -17,37 +18,89 @@ const criarCardAluno = ( aluno ) => {
     return container
 }
 
-const criarDisciplinas = ( disciplina ) => {
+const criarDisciplinas = (disciplina) => {
     const container = document.createElement('div')
     container.classList.add('container-barra')
 
     if (disciplina.status == 'Aprovado') {
         const materia = document.createElement('p')
-        materia.textContent = disciplina.nome
+        materia.textContent = 'FE'
 
-        const containerAzul = document.createElement('div')
-        containerAzul.classList.add('container-azul')
+        const containerBarra = document.createElement('div')
+        containerBarra.classList.add('container-azul')
 
-        const barraAzul = document.createElement('div')
-        barraAzul.classList.add('barra-azul')
+        const barra = document.createElement('div')
+        barra.classList.add('barra-azul')
+        barra.style.height = disciplina.media + '%'
 
+        const nota = document.createElement('p')
+        nota.classList.add('notas-azul')
+        nota.textContent = disciplina.media
+
+        containerBarra.append(barra, nota)
+        container.append(materia, containerBarra)
+
+    } else if (disciplina.status == 'Exame') {
+        const materia = document.createElement('p')
+        materia.textContent = 'FE'
+
+        const containerBarra = document.createElement('div')
+        containerBarra.classList.add('container-amarelo')
+
+        const barra = document.createElement('div')
+        barra.classList.add('barra-amarelo')
+        barra.style.height = disciplina.media + '%'
+
+        const nota = document.createElement('p')
+        nota.classList.add('notas-amarelo')
+        nota.textContent = disciplina.media
+
+        containerBarra.append(barra, nota)
+        container.append(materia, containerBarra)
+
+    } else if (disciplina.status == 'Reprovado') {
+        const materia = document.createElement('p')
+        materia.textContent = 'FE'
+
+        const containerBarra = document.createElement('div')
+        containerBarra.classList.add('container-vermelho')
+
+        const barra = document.createElement('div')
+        barra.classList.add('barra-vermelho')
+        barra.style.height = disciplina.media + '%'
+
+        const nota = document.createElement('p')
+        nota.classList.add('notas-vermelho')
+        nota.textContent = disciplina.media
+
+        containerBarra.append(barra, nota)
+        container.append(materia, containerBarra)
     }
-    
+
+    return container
+
 }
 
-const getSigla = function (palavraNaoAbreviada) {
-    let palavra = palavraNaoAbreviada
+const carregarDisciplina = async () => {
+    const containerP = document.getElementById('container-progresso')
+    const notas = await alunoInfo.curso[0].disciplinas.map(criarDisciplinas)
 
-    const ignorar = ['de', 'a', 'do', 'da', 'e', 'em', 'para', 'com', 'por', 'sem', 'sob']
-    let palavraDividida = palavra.split(' ')
-    let sigla = ''
-
-    if (palavraDividida.length == 1) {
-        
-    }
-    
+    containerP.replaceChildren(...notas)
 }
 
-console.log(getSigla('Programação web back end'))
+// const getSigla = function (palavraNaoAbreviada) {
+//     let palavra = palavraNaoAbreviada
+
+//     const ignorar = ['de', 'a', 'do', 'da', 'e', 'em', 'para', 'com', 'por', 'sem', 'sob']
+//     let palavraDividida = palavra.split(' ')
+//     let sigla = ''
+
+//     if (palavraDividida.length == 1) {
+
+//     }
+
+// }
+
 
 criarCardAluno(alunoInfo)
+carregarDisciplina()
