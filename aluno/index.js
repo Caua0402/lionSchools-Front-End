@@ -2,7 +2,7 @@
 
 import { getAluno } from "../js/apis.js"
 const alunoInfo = await getAluno(localStorage.getItem('matricula'))
-console.log(alunoInfo.curso[0].disciplinas)
+
 
 const criarCardAluno = (aluno) => {
     const container = document.getElementById('aluno-info')
@@ -24,7 +24,7 @@ const criarDisciplinas = (disciplina) => {
 
     if (disciplina.status == 'Aprovado') {
         const materia = document.createElement('p')
-        materia.textContent = 'FE'
+        materia.textContent = getSigla(disciplina.nome)
 
         const containerBarra = document.createElement('div')
         containerBarra.classList.add('container-azul')
@@ -42,7 +42,7 @@ const criarDisciplinas = (disciplina) => {
 
     } else if (disciplina.status == 'Exame') {
         const materia = document.createElement('p')
-        materia.textContent = 'FE'
+        materia.textContent = getSigla(disciplina.nome)
 
         const containerBarra = document.createElement('div')
         containerBarra.classList.add('container-amarelo')
@@ -60,7 +60,7 @@ const criarDisciplinas = (disciplina) => {
 
     } else if (disciplina.status == 'Reprovado') {
         const materia = document.createElement('p')
-        materia.textContent = 'FE'
+        materia.textContent = getSigla(disciplina.nome)
 
         const containerBarra = document.createElement('div')
         containerBarra.classList.add('container-vermelho')
@@ -88,19 +88,27 @@ const carregarDisciplina = async () => {
     containerP.replaceChildren(...notas)
 }
 
-// const getSigla = function (palavraNaoAbreviada) {
-//     let palavra = palavraNaoAbreviada
+const getSigla = function (palavraNaoAbreviada) {
+    let palavra = palavraNaoAbreviada
 
-//     const ignorar = ['de', 'a', 'do', 'da', 'e', 'em', 'para', 'com', 'por', 'sem', 'sob']
-//     let palavraDividida = palavra.split(' ')
-//     let sigla = ''
+    const ignorar = ['de', 'a', 'do', 'da', 'e', 'em', 'para', 'com', 'por', 'sem', 'sob']
+    let palavraDividida = palavra.split(' ')
+    let sigla = ''
 
-//     if (palavraDividida.length == 1) {
 
-//     }
+    if (palavraDividida.length == 1) {
+        sigla = palavraDividida[0].slice(0, 2)
+    } 
+    else {
+        palavraDividida.forEach(palavras => {
+          if(!ignorar.includes(palavras)){
+              sigla += palavras.charAt(0)
+          }  
+        })
+    }
 
-// }
-
+    return sigla.toUpperCase()
+}
 
 criarCardAluno(alunoInfo)
 carregarDisciplina()
