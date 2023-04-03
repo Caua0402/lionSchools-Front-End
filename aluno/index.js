@@ -37,12 +37,14 @@ const criarDisciplinas = (disciplina) => {
         nota.classList.add('notas-azul')
         nota.textContent = disciplina.media
 
+        container.title = disciplina.nome
+
         containerBarra.append(barra, nota)
         container.append(materia, containerBarra)
 
     } else if (disciplina.status == 'Exame') {
         const materia = document.createElement('p')
-        materia.textContent = getSigla(disciplina.nome)
+        materia.textContent = getSigla(disciplina.nome)       
 
         const containerBarra = document.createElement('div')
         containerBarra.classList.add('container-amarelo')
@@ -54,6 +56,8 @@ const criarDisciplinas = (disciplina) => {
         const nota = document.createElement('p')
         nota.classList.add('notas-amarelo')
         nota.textContent = disciplina.media
+
+        container.title = disciplina.nome
 
         containerBarra.append(barra, nota)
         container.append(materia, containerBarra)
@@ -72,6 +76,8 @@ const criarDisciplinas = (disciplina) => {
         const nota = document.createElement('p')
         nota.classList.add('notas-vermelho')
         nota.textContent = disciplina.media
+
+        container.title = disciplina.nome
 
         containerBarra.append(barra, nota)
         container.append(materia, containerBarra)
@@ -107,7 +113,7 @@ const getSigla = function (palavraNaoAbreviada) {
         })
     }
 
-    return sigla.toUpperCase()
+    return sigla.slice(-2).toUpperCase()
 }
 
 criarCardAluno(alunoInfo)
