@@ -11,7 +11,7 @@ const criarCardAluno = (aluno) => {
     foto.src = aluno.foto
 
     const nome = document.createElement('p')
-    nome.textContent = aluno.nome
+    nome.textContent = aluno.nome.toUpperCase()
 
     container.append(foto, nome)
 
@@ -83,6 +83,8 @@ const criarDisciplinas = (disciplina) => {
         container.append(materia, containerBarra)
     }
 
+    
+
     return container
 
 }
@@ -97,7 +99,7 @@ const carregarDisciplina = async () => {
 const getSigla = function (palavraNaoAbreviada) {
     let palavra = palavraNaoAbreviada
 
-    const ignorar = ['de', 'a', 'do', 'da', 'e', 'em', 'para', 'com', 'por', 'sem', 'sob']
+    const ignorar = ['de', 'a', 'do', 'da', 'e', 'em', 'para', 'com', 'por', 'sem', 'sob', 'II', 'III', 'I']
     let palavraDividida = palavra.split(' ')
     let sigla = ''
 
@@ -115,6 +117,9 @@ const getSigla = function (palavraNaoAbreviada) {
 
     return sigla.slice(-2).toUpperCase()
 }
+
+
+
 
 criarCardAluno(alunoInfo)
 carregarDisciplina()
