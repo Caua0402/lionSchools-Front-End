@@ -14,7 +14,7 @@ body{
     justify-content: space-between;
 }
 
-/* HEADER GERAL */
+
 header{
     display: flex;
     height: 100px;
@@ -25,6 +25,12 @@ header{
     font-family: var(--primary-font);
     padding: 0 96px;
 }
+
+.logo{
+    display: flex;
+    gap: 11px;
+}
+
 .img-logo{
     height: 75px;
     width: 60px;
