@@ -23,3 +23,11 @@ export const getAluno = async (matricula) => {
 
     return data 
 }
+
+export const getAlunosStatus = async (status) => {
+    const url = `https://lion-school-apis.cyclic.app//v1/lion-school/alunos?status=${status}`
+    const response = await fetch(url)
+    const data = response.json()
+
+    return data
+}

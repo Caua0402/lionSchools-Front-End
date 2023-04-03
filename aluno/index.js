@@ -83,6 +83,8 @@ const criarDisciplinas = (disciplina) => {
         container.append(materia, containerBarra)
     }
 
+    
+
     return container
 
 }
@@ -115,6 +117,9 @@ const getSigla = function (palavraNaoAbreviada) {
 
     return sigla.slice(-2).toUpperCase()
 }
+
+
+
 
 criarCardAluno(alunoInfo)
 carregarDisciplina()
