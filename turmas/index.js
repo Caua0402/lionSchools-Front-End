@@ -113,6 +113,9 @@ const filtrarPeloAno = (event) => {
 
 }
 
+
+
+console.log(localStorage.getItem('curso'));
 carregarCardAlunos()
 
 
