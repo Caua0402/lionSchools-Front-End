@@ -15,7 +15,7 @@ const criarCardAlunos = (aluno) => {
 
     const card = document.createElement('a')
     card.classList.add('card')
-    card.href = '../aluno'
+    card.href = '../aluno/index.html'
 
     const picture = document.createElement('img')
     picture.src = aluno.foto
