@@ -82,7 +82,38 @@ const carregarCardAlunos = async () => {
         container.replaceChildren(...alunosCurs)
 
     })
+
+    const ano = document.getElementById('test-year')
+
+    ano.addEventListener('keydown', function (e) {
+        if (e.key == "Enter") {
+            this.blur()
+        }
+    })
+
+    ano.addEventListener('blur', filtrarPeloAno)
+
 }
+
+const filtrarPeloAno = (event) => {
+    const elemento = event.target.id
+    const inputYear = document.getElementById(elemento)
+    const alunosAno = []
+
+    const container = document.getElementById('container')
+
+    alunosLista.alunos.forEach(aluno => {
+        if (aluno.curso[0].conclusao == inputYear.value){
+            alunosAno.push(aluno)
+        }
+    })
+    
+    const alunos = alunosAno.map(criarCardAlunos)
+    container.replaceChildren(...alunos)
+
+}
+
+
 
 console.log(localStorage.getItem('curso'));
 carregarCardAlunos()
