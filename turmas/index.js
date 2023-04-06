@@ -4,7 +4,7 @@ import { listarAlunos } from "../js/apis.js"
 const alunosLista = await listarAlunos(localStorage.getItem('sigla'))
 
 import { getAlunosStatus } from "../js/apis.js"
-var statusFiltro 
+var statusFiltro = 'Status'
 
 const criarCardAlunos = (aluno) => {
     const title = document.getElementById('title-card')
@@ -104,16 +104,27 @@ const filtrarPeloAno = async (event) => {
     const alunosAno = []
     const alunosCurso = []
 
+    const container = document.getElementById('container')
+
     const alunosStatus = await getAlunosStatus(statusFiltro)
+
+    if(statusFiltro == 'Status'){
+        alunosLista.alunos.forEach(aluno => {
+            if(aluno.curso[0].conclusao == inputYear.value){
+                alunosAno.push(aluno)
+                
+                const alunos = alunosAno.map(criarCardAlunos)
+                
+                container.replaceChildren(...alunos)
+            }
+        })
+    }
 
     alunosStatus.alunos.forEach(aluno => {
         if(aluno.curso[0].sigla == localStorage.getItem('sigla')){
             alunosCurso.push(aluno)
         }
     })
-
-
-    const container = document.getElementById('container')
 
     if (inputYear.value === '') {
         const alunosList = alunosLista.alunos.map(criarCardAlunos)
