@@ -4,6 +4,7 @@ import { listarAlunos } from "../js/apis.js"
 const alunosLista = await listarAlunos(localStorage.getItem('sigla'))
 
 import { getAlunosStatus } from "../js/apis.js"
+var statusFiltro 
 
 const criarCardAlunos = (aluno) => {
     const title = document.getElementById('title-card')
@@ -56,6 +57,7 @@ const carregarCardAlunos = async () => {
     finalizado.addEventListener('click', async () => {
         const alunosFinalizado = await getAlunosStatus('Finalizado')
         const alunosF = []
+        statusFiltro = 'Finalizado'
 
         alunosFinalizado.alunos.forEach(aluno => {
             if (aluno.curso[0].nome.slice(6) == localStorage.getItem('curso').slice(6)) {
@@ -71,6 +73,7 @@ const carregarCardAlunos = async () => {
     cursando.addEventListener('click', async () => {
         const alunosCursando = await getAlunosStatus('Cursando')
         const alunosC = []
+        statusFiltro = 'Cursando'
 
         alunosCursando.alunos.forEach(aluno => {
             if (aluno.curso[0].nome.slice(6) == localStorage.getItem('curso').slice(6)) {
@@ -95,27 +98,38 @@ const carregarCardAlunos = async () => {
 
 }
 
-const filtrarPeloAno = (event) => {
+const filtrarPeloAno = async (event) => {
     const elemento = event.target.id
     const inputYear = document.getElementById(elemento)
     const alunosAno = []
+    const alunosCurso = []
+
+    const alunosStatus = await getAlunosStatus(statusFiltro)
+
+    alunosStatus.alunos.forEach(aluno => {
+        if(aluno.curso[0].sigla == localStorage.getItem('sigla')){
+            alunosCurso.push(aluno)
+        }
+    })
+
 
     const container = document.getElementById('container')
 
-    alunosLista.alunos.forEach(aluno => {
-        if (aluno.curso[0].conclusao == inputYear.value){
-            alunosAno.push(aluno)
-        }
-    })
-    
-    const alunos = alunosAno.map(criarCardAlunos)
-    container.replaceChildren(...alunos)
+    if (inputYear.value === '') {
+        const alunosList = alunosLista.alunos.map(criarCardAlunos)
+        container.replaceChildren(...alunosList)
 
+    } else {
+
+        alunosCurso.forEach(aluno => {
+            if (aluno.curso[0].conclusao == inputYear.value){
+                alunosAno.push(aluno)
+            }
+        })
+        
+        const alunos = alunosAno.map(criarCardAlunos)
+        container.replaceChildren(...alunos)
+    }
 }
 
-
-
-console.log(localStorage.getItem('curso'));
 carregarCardAlunos()
-
-
