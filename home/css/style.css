@@ -64,7 +64,14 @@ header{
 
 main{
     display: flex;
+    align-items: center;
+    height: 90vh;
     justify-content: space-around;
+}
+
+.img{
+    width: 257px;
+    height: 426px;
 }
 
 /* FOOTER GERAL*/

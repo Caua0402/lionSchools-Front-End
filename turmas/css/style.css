@@ -59,6 +59,7 @@ header{
 
 .container-status{
     display: flex;
+    position: relative;
     justify-content: space-between;
     max-height: 10vh;
     align-items: center;
@@ -104,6 +105,9 @@ header{
 
 .completed-year{
     color: var(--primary-color);
+    font-weight: 500;
+    font-family: var(--primary-font);
+    padding-left: 35vw;
 }
 
 .btnFormat{
@@ -111,6 +115,7 @@ header{
 }
 
 .menu{
+    position: absolute;
     max-height: 100%;
 }
 
@@ -120,6 +125,8 @@ header{
 
 .menu li a {
     color: #3347B0;
+    font-family: var(--primary-font);
+    font-weight: 500;
 }
 
 .menu:hover ul {
@@ -156,7 +163,7 @@ header{
 main{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 90vh;
 }
 
 .container{
@@ -165,6 +172,7 @@ main{
     padding: 30px;
     gap: 64px;
 }
+
 
 .card{
     width: 200px;
@@ -177,6 +185,11 @@ main{
     box-shadow: 0 0 8px #0006;
     padding: 30px;
     background-color: #3347B0;
+}
+
+.card:hover{
+    transform: scale(115%);
+    transition: .2s ease-in;
 }
 
 .card img{
@@ -296,8 +309,6 @@ footer{
         padding: 13px;
     }
 
-    
-
     .container-status{
         width: 101%;
         gap: 10px;
@@ -307,6 +318,8 @@ footer{
     .completed-year{
         font-size: 13.75px;
         font-weight: 500;
+        font-family: var(--primary-font);
+        padding-left: 15vw;
         
     }
 
