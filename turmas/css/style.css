@@ -60,14 +60,15 @@ header{
 .container-status{
     display: flex;
     justify-content: space-between;
+    max-height: 10vh;
     align-items: center;
-    height: 15vh;
+    height: 10vh;
     background-color: #BCC2E5;
     padding: 0 96px;
 }
 
 
-.legenda-cursos{
+.caption-courses{
     display: flex;
     align-items: center;
 }
@@ -99,6 +100,18 @@ header{
     font-weight: 500;
     line-height: 19px;
     padding: 8px;
+}
+
+.completed-year{
+    color: var(--primary-color);
+}
+
+.btnFormat{
+    border: transparent;
+}
+
+.menu{
+    max-height: 100%;
 }
 
 .menu ul {
@@ -272,32 +285,43 @@ footer{
 /* MOBILE */
 @media (max-width:640px){
 
+    body{
+        width: 99%;
+    }
+
     header{
-        width: 100%;
+        width: 101%;
         gap: 30px ;
         justify-content: space-around;
         padding: 13px;
     }
 
+    
+
     .container-status{
-        width: 100%;
+        width: 101%;
+        gap: 10px;
         padding: 10px;
     }
 
-    .legenda-cursos{
-        padding: 20px;
+    .completed-year{
+        font-size: 13.75px;
+        font-weight: 500;
+        
     }
 
     .legend{
         font-size: 0.75rem;
+        padding: 6px;
     }
 
     .cursando{
         font-size: 0.75rem;
+        padding: 4px;
     }
 
     main{
-        width: 100%;
+        width: 101%;
         height: 360vh;
         flex-direction: column;
         align-items: center;
@@ -305,7 +329,7 @@ footer{
     }
 
     .card{
-        width: 100%;
+        width: 101%;
     }
 
     .text-card{
@@ -319,7 +343,7 @@ footer{
     }
     
     footer{
-        width: 100%;
+        width: 101%;
         flex-direction: column;
         height: auto;
         padding: 32px;
@@ -329,7 +353,7 @@ footer{
         display: none;
     }
     .container-social{
-        flex-direction: column;
+        flex-direction: row;
     }
     
     .img-aluno{
