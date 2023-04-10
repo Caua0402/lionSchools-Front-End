@@ -47,9 +47,9 @@ Método | End-point | Descrição
 ---
 
 ## Entregas
-- [ ] Cronograma de atividades
-- [ ] Documentação da API
-- [ ] Postman 
+- [x] Cronograma de atividades
+- [x] Documentação da API
+- [x] Postman 
 
 ---
 
