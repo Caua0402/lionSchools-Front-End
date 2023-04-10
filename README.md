@@ -20,16 +20,16 @@ O projeto é o gerenciamento da escola Lion School, deverá ser realizado tanto 
 Deverá consumir a API e criar as páginas conforme o designer feito no [figma](https://www.figma.com/file/KhTQbG1DY0MdAIGK73ZWp8/PWFE---Trabalho-Integrado?node-id=0%3A1).
 
 ### Critérios 
-- [ X ] Criou layout conforme designer feito no Figma?
-- [ X ] Os botões dos cursos são dinâmicos?
-- [ X ] Os cards são criados dinamicamente?
-- [ X ] A página com informações dos cursos foi criada dinamicamente?
-- [ X ] O filtro por status está funcional?
-- [ X ] Os nomes das variáveis, funções e arquivos tem valor semântico?
-- [ X ] A maioria das funções seguem as boas práticas como responsabilidade única?
-- [ X ] Foi criado o layout responsivo no Figma?
-- [ X ] Foi implementado a responsividade conforme planejado no Figma?
-- [ X ] Foi criado o filtro por ano?
+- [x] Criou layout conforme designer feito no Figma?
+- [x] Os botões dos cursos são dinâmicos?
+- [x] Os cards são criados dinamicamente?
+- [x] A página com informações dos cursos foi criada dinamicamente?
+- [x] O filtro por status está funcional?
+- [x] Os nomes das variáveis, funções e arquivos tem valor semântico?
+- [x] A maioria das funções seguem as boas práticas como responsabilidade única?
+- [x] Foi criado o layout responsivo no Figma?
+- [x] Foi implementado a responsividade conforme planejado no Figma?
+- [x] Foi criado o filtro por ano?
 
 ---
 ## Projeto Back-end
