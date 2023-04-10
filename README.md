@@ -32,19 +32,6 @@ Deverá consumir a API e criar as páginas conforme o designer feito no [figma](
 - [x] Foi criado o filtro por ano?
 
 ---
-## Projeto Back-end
-Deverá criar um servidor API implementando somente o EndPoint na API, contendo os seguintes end-points:
-
-Método | End-point | Descrição 
----|---|---
-**GET** | /v1/lion-school/cursos |  Recupera uma lista de todos os cursos oferecidos pela escola.
-**GET** | /v1/lion-school/alunos |  Recupera uma lista de todos os alunos matriculados na escola.
-**GET** | /v1/lion-school/alunos/{matricula} | Recupera informações de um aluno específico com base no número de matrícula.
-**GET** | /v1/lion-school/alunos?curso={ds}: | Recupera uma lista de todos os alunos matriculados no curso especificado.
-**GET** | /v1/lion-school/alunos?status={finalizado} | Recupera uma lista de todos os alunos com o status especificado.
-
-
----
 
 ## Entregas
 - [x] Cronograma de atividades
@@ -54,8 +41,8 @@ Método | End-point | Descrição
 ---
 
 ## Desafio extra
-- Além do GitHub Pages, pesquise e implemente outras opções gratuitas para hospedar o front-end.
-- Implemente o back-end na plataforma da Microsoft Azure e pesquisa outras opções gratuitas.
+- [x] Além do GitHub Pages, pesquise e implemente outras opções gratuitas para hospedar o front-end.
+- [x] Implemente o back-end na plataforma da Microsoft Azure e pesquisa outras opções gratuitas.
 
 ### Professores
 - [Fernando Leonid](https://github.com/fernandoleonid)
