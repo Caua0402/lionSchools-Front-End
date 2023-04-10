@@ -2,7 +2,7 @@
 
 ![CAPTURA](./home/img/captura.png)
 
-[Clique aqui para ver o site.](https://lion-schools.vercel.app/)
+[Clique aqui para ver o site.](https://lion-schools-front-end.vercel.app/)
 
 [Back End](https://github.com/yasmingcv/lion-school)
 
