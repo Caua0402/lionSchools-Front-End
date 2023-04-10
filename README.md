@@ -6,6 +6,8 @@
 
 [Back End](https://github.com/yasmingcv/lion-school)
 
+[Figma](https://www.figma.com/file/Q44oK1pQVEyvhNpYSMGkYY/Untitled?node-id=0-1&t=3ffPiB3q045vz43y-0)
+
 ---
 
 ## Objetivo
