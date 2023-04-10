@@ -100,7 +100,7 @@ footer{
 .container-icon i{
     font-size: 1.6rem;
 }
-.copyright{
+.author{
     font-family: var(--primary-font);
     font-size: 1.2rem;
     font-weight: 400;
@@ -147,6 +147,13 @@ footer{
         padding: 32px;
         gap: 32px;
     }
+
+    .author{
+        font-weight: 400;
+        font-size: 1rem;
+        font-family: var(--primary-font);
+    }
+
     .copyright{
         display: none;
     }
