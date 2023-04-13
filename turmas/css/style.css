@@ -179,7 +179,7 @@ main{
 
 
 .card{
-    width: 200px;
+    width: 210px;
     height: 300px;
     display: flex;
     flex-direction: column;
