@@ -9,6 +9,7 @@ const criarCardAluno = (aluno) => {
 
     const foto = document.createElement('img')
     foto.src = aluno.foto
+    foto.alt = 'Foto do aluno'
 
     const nome = document.createElement('p')
     nome.textContent = aluno.nome.toUpperCase()
