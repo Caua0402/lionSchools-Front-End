@@ -15,6 +15,7 @@ const criarCardCursos = ( curso ) => {
 
     const icone = document.createElement('img')
     icone.src = curso.icone
+    icone.alt = 'Icone do curso'
 
     const sigla = document.createElement('h1')
     sigla.classList.add('title-curso')

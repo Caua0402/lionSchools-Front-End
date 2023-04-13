@@ -19,6 +19,7 @@ const criarCardAlunos = (aluno) => {
 
     const picture = document.createElement('img')
     picture.src = aluno.foto
+    picture.alt = 'Foto do aluno'
 
     const name = document.createElement('p')
     name.classList.add('card__description')
